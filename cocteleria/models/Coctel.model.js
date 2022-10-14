@@ -12,6 +12,9 @@ const coctelSchema = new Schema(
     ingredientes:{
       type: String
     },
+    img:{
+      type: String
+    },
     pais:{
       type: String
     },
@@ -21,7 +24,10 @@ const coctelSchema = new Schema(
     procedimiento:{
       type: String
     },
-   
+    puntuacion: {
+      type: Number,
+      enum: [1, 2, 3, 4, 5]
+    },
     creador: {type: Schema.Types.ObjectId, ref: "User"}
   },
   {
